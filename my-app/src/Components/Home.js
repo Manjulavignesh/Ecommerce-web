@@ -22,6 +22,8 @@ const Home = () => {
               id={prod.id}
               key={prod.id}
             />
+            
+            
           );
         })}
       </div>

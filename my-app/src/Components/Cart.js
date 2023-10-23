@@ -1,8 +1,9 @@
-import React, { useEffect,useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, ListGroup, ListGroupItem, Row, Col } from "react-bootstrap";
 import { CartState } from "../Context/Context";
 import { Form, Image } from "react-bootstrap";
 import { AiFillDelete } from "react-icons/ai";
+
 const Cart = () => {
   const list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   const {
@@ -17,8 +18,7 @@ const Cart = () => {
   }, [cart]);
   return (
     <>
-    <Button type="button"
-        style={{marginLeft:475, fontSize: 15 }} >X</Button>
+      
       <div
         style={{
           fontFamily: "cursive",
@@ -29,7 +29,7 @@ const Cart = () => {
       >
         CART
       </div>
-      
+
       <div>
         <span
           style={{ fontSize: 28, fontWeight: 750, fontFamily: "monospace" }}
@@ -113,7 +113,7 @@ const Cart = () => {
             alert("You have Nothing in Cart , Add some products to purchase !");
           } else {
             alert("Thanks for the purchase");
-            dispatch({ type: "Delete From Cart", payload: cart.prod })
+            dispatch({ type: "Delete From Cart", payload: cart.prod });
           }
         }}
       >

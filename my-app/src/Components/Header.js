@@ -1,8 +1,9 @@
 import React from "react";
-import { Container, Navbar, Nav, Dropdown, Badge } from "react-bootstrap";
+import { Container, Navbar, Nav, Dropdown, Badge, DropdownItem } from "react-bootstrap";
 import { FaShoppingCart } from "react-icons/fa";
 import { CartState } from "../Context/Context";
 import Cart from "./Cart";
+import {Button} from "react-bootstrap";
 const Header = () => {
   const {
     state: { cart },
@@ -17,9 +18,13 @@ const Header = () => {
               <Badge>{cart.length}</Badge>
             </Dropdown.Toggle>
             <Dropdown.Menu style={{ minWidth: 500 }}>
+              <Dropdown.Item style={{ backgroundColor: 'white'}}><Button type="button" style={{ marginLeft: 475, fontSize: 15 }} >
+        X
+      </Button></Dropdown.Item>
               <Cart></Cart>
             </Dropdown.Menu>
           </Dropdown>
+          
         </Nav>
         
         <Navbar.Brand
