@@ -1,0 +1,9 @@
+.button.play {
+    
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        background-color:gray;
+        border: none;
+      
+  }
