@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { Card } from "react-bootstrap";
 const ContactUs = () => {
   const nameInput = useRef();
   const emailInput = useRef();
@@ -19,11 +20,12 @@ const ContactUs = () => {
     phoneInput.current.value="";
   };
   return (
+    <Card style={{backgroundColor:"gray",height:650}}>
     <form
       style={{ margin: 150, marginLeft: 600, marginTop: 100 }}
       onSubmit={submitHandler}
     >
-      <label>Name:</label>
+      <label style={{fontSize:25,fontWeight:500}}>Name:</label>
       <br />
       <input
         type="text"
@@ -32,7 +34,7 @@ const ContactUs = () => {
         ref={nameInput}
       />
       <br />
-      <label>Email Id:</label>
+      <label style={{fontSize:25,fontWeight:500}}>Email Id:</label>
       <br />
       <input
         type="email"
@@ -41,7 +43,7 @@ const ContactUs = () => {
         ref={emailInput}
       />
       <br />
-      <label>Phone:</label>
+      <label style={{fontSize:25,fontWeight:500}}>Phone:</label>
       <br />
       <input
         type="number"
@@ -52,6 +54,7 @@ const ContactUs = () => {
       <br />
       <button style={{ float: "left", marginTop: 25 }}>Submit</button>
     </form>
+    </Card>    
   );
 };
 export default ContactUs;

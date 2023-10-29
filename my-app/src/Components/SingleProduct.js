@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
 import { CartState } from "../Context/Context";
+import "./SingleProduct.css"
 
 const SingleProduct = (prod) => {
   const {
@@ -10,7 +11,7 @@ const SingleProduct = (prod) => {
   return (
     <div className="products">
       <Card>
-        <Card.Img variant="top" src={prod.imageUrl} alt={prod.title} />
+        <a href={`http://localhost:3000/store/${prod.title}`}><Card.Img variant="top" src={prod.imageUrl} alt={prod.title} className="zoom" /></a>
         <Card.Body>
           <Card.Title>{prod.title}</Card.Title>
           <Card.Subtitle>{`$ ${prod.price}`}</Card.Subtitle>
