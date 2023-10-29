@@ -47,6 +47,9 @@ const Header = () => {
           <Nav.Link href="about" style={{ color: "#00CC00" }}>
             About
           </Nav.Link>
+          <Nav.Link href="contactUS" style={{ color: "#00CC00" }}>
+            ContactUs
+          </Nav.Link>
         </Nav>
       </Container>
     </Navbar>
