@@ -1,6 +1,10 @@
 import React from "react";
-import { Navbar, Nav,Container  } from "react-bootstrap";
+import { Navbar, Nav,Container,Button  } from "react-bootstrap";
 const CommonHeader = () => {
+  const logoutHandler=()=>{
+    window.location.href="http://localhost:3000/login";
+    localStorage.clear();
+  }
 return (    
 <Navbar bg="dark" variant="dark" style={{ fontSize: 25, height: 80 }}>
 <Container>   
@@ -27,6 +31,7 @@ return (
           <Nav.Link href="contactUS" style={{ color: "#00CC00" }}>
             ContactUs
           </Nav.Link>
+          <Button style={{width:100,fontSize:20,textAlign:"center"}} onClick={logoutHandler}>Logout</Button>
         </Nav>
       
         </Container>

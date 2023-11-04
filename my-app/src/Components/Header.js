@@ -5,6 +5,10 @@ import { CartState } from "../Context/Context";
 import Cart from "./Cart";
 import {Button} from "react-bootstrap";
 const Header = () => {
+  const logoutHandler=()=>{
+    window.location.href="http://localhost:3000/login";
+    localStorage.clear();
+  }
   const {
     state: { cart },
   } = CartState();
@@ -50,6 +54,7 @@ const Header = () => {
           <Nav.Link href="contactUS" style={{ color: "#00CC00" }}>
             ContactUs
           </Nav.Link>
+          <Button style={{width:100,fontSize:20,textAlign:"center"}} onClick={logoutHandler}>Logout</Button>
         </Nav>
       </Container>
     </Navbar>
