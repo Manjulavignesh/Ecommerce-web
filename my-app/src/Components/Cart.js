@@ -113,6 +113,7 @@ const Cart = () => {
             alert("You have Nothing in Cart , Add some products to purchase !");
           } else {
             alert("Thanks for the purchase");
+            console.log(cart);
             dispatch({ type: "Delete From Cart", payload: cart.prod });
           }
         }}

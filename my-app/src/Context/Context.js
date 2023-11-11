@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { createContext, useReducer } from "react";
 import { CartReducer } from "./Reducers";
 const Cart = createContext();
-
+let cartItem=JSON.parse(localStorage.getItem("cart")||'[]')
 const Context = ({ children }) => {
   const cartElements = [
     {
@@ -14,7 +14,7 @@ const Context = ({ children }) => {
         "https://prasadyash2411.github.io/ecom-website/img/Album%201.png",
 
       quantity: 2,
-      id:Math.random()
+      id: Math.random(),
     },
 
     {
@@ -26,7 +26,7 @@ const Context = ({ children }) => {
         "https://prasadyash2411.github.io/ecom-website/img/Album%202.png",
 
       quantity: 3,
-      id:Math.random()
+      id: Math.random(),
     },
 
     {
@@ -38,12 +38,12 @@ const Context = ({ children }) => {
         "https://prasadyash2411.github.io/ecom-website/img/Album%203.png",
 
       quantity: 1,
-      id:Math.random()
+      id: Math.random(),
     },
   ];
   const [state, dispatch] = useReducer(CartReducer, {
     products: cartElements,
-    cart: [],
+    cart: cartItem,
   });
 
   return <Cart.Provider value={{ state, dispatch }}>{children}</Cart.Provider>;

@@ -1,7 +1,5 @@
 import { useRef, useState } from "react";
 import { Card } from "react-bootstrap";
-import Home from "../Home";
-import { Link } from "react-router-dom";
 const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
