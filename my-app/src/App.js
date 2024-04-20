@@ -1,4 +1,5 @@
 import "./App.css";
+import { lazy } from "react";
 import About from "./Components/About/About";
 import CommonHeader from "./Components/About/CommonHeader";
 import Colors from "./Components/Colors";
@@ -7,10 +8,11 @@ import Header from "./Components/Header";
 import Home from "./Components/Home";
 import Main from "./Components/Main/Main";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Product2 from "./Components/Product2";
+// import Product2 from "./Components/Product2";
 import Product3 from "./Components/Product3";
 import Login from "./Components/Login/Login";
 import LoginHeader from "./Components/Login/LoginHeader";
+const Product2=lazy(()=>import(`./Components/Product2`))
 const router = createBrowserRouter([
   { path: "/", element: [<LoginHeader />, <Login />] },
   { path: "/store", element: [<Header />, <Home />] },

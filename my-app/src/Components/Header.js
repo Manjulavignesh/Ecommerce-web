@@ -7,7 +7,7 @@ import {Button} from "react-bootstrap";
 const Header = () => {
   const logoutHandler=()=>{
     window.location.href="http://localhost:3000/login";
-    localStorage.clear();
+    /*localStorage.clear();*/
   }
   const {
     state: { cart },

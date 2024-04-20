@@ -34,7 +34,7 @@ const SingleProduct = (prod) => {
                   dispatch({ type: "Remove From Cart", payload: prod });
                   axios
                     .get(
-                      "https://crudcrud.com/api/6a3ee3d460e64ac8a0c57b2ff9d23c66/Product"
+                      "https://crudcrud.com/api/9451b42f4cff416da248af78a1dc572c/Product"
                     )
                     .then((res) => {
                       let id;
@@ -45,7 +45,7 @@ const SingleProduct = (prod) => {
                         }
                       }
                       axios.delete(
-                        `https://crudcrud.com/api/6a3ee3d460e64ac8a0c57b2ff9d23c66/Product/${id}`
+                        `https://crudcrud.com/api/9451b42f4cff416da248af78a1dc572c/Product/${id}`
                       );
                     });
                 }}
@@ -58,7 +58,7 @@ const SingleProduct = (prod) => {
                 onClick={() => {
                   dispatch({ type: "Add to Cart", payload: prod });
                   axios.post(
-                    "https://crudcrud.com/api/6a3ee3d460e64ac8a0c57b2ff9d23c66/Product",
+                    "https://crudcrud.com/api/9451b42f4cff416da248af78a1dc572c/Product",
                     prod
                   );
                 }}
